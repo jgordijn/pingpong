@@ -4,17 +4,13 @@ object Version {
   val akka         = "2.3.2"
   val logback      = "1.1.2"
   val scala        = "2.11.0"
-  val scalaParsers = "1.0.1"
-  val scalaTest    = "2.1.4"
 }
 
 object Library {
   val akkaActor      = "com.typesafe.akka"      %% "akka-actor"               % Version.akka
+  val akkaCluster    = "com.typesafe.akka"      %% "akka-cluster"             % Version.akka
   val akkaSlf4j      = "com.typesafe.akka"      %% "akka-slf4j"               % Version.akka
-  val akkaTestkit    = "com.typesafe.akka"      %% "akka-testkit"             % Version.akka
   val logbackClassic = "ch.qos.logback"         %  "logback-classic"          % Version.logback
-  val scalaParsers   = "org.scala-lang.modules" %% "scala-parser-combinators" % Version.scalaParsers
-  val scalaTest      = "org.scalatest"          %% "scalatest"                % Version.scalaTest
 }
 
 object Dependencies {
@@ -23,11 +19,9 @@ object Dependencies {
 
   val pingPong = List(
     akkaActor,
+    akkaCluster,
     akkaSlf4j,
-    logbackClassic,
-    scalaParsers,
-    akkaTestkit % "test",
-    scalaTest   % "test"
+    logbackClassic
   )
 }
 
