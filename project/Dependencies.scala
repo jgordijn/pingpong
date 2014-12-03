@@ -1,13 +1,14 @@
 import sbt._
 
 object Version {
-  val akka         = "2.3.2"
+  val akka         = "2.3.6"
   val logback      = "1.1.2"
   val scala        = "2.11.0"
 }
 
 object Library {
   val akkaActor      = "com.typesafe.akka"      %% "akka-actor"               % Version.akka
+  val akkaContrib    = "com.typesafe.akka"      %% "akka-contrib"             % Version.akka
   val akkaCluster    = "com.typesafe.akka"      %% "akka-cluster"             % Version.akka
   val akkaSlf4j      = "com.typesafe.akka"      %% "akka-slf4j"               % Version.akka
   val logbackClassic = "ch.qos.logback"         %  "logback-classic"          % Version.logback
@@ -20,6 +21,7 @@ object Dependencies {
   val pingPong = List(
     akkaActor,
     akkaCluster,
+    akkaContrib,
     akkaSlf4j,
     logbackClassic
   )

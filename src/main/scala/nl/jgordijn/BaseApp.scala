@@ -1,6 +1,6 @@
 package nl.jgordijn
 
-import akka.actor.{ ActorRef, ActorSystem }
+import akka.actor.ActorSystem
 import scala.collection.breakOut
 import scala.io.StdIn
 
